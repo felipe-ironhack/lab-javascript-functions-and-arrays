@@ -12,7 +12,7 @@ function findLongestWord(wordsArray) {
   if (!wordsArray.length) return null
   let longest = ""
 
-  for(let word of wordsArray){
+  for (let word of wordsArray){
     if (word.length > longest.length) {
       longest = word
     }
