@@ -130,7 +130,7 @@ const wordsCount = [
 function howManyTimes(wordsArray, search) {
   let count = 0;
 
-  wordsArray.forEach(word => {if(word === search) {count += 1}})
+  wordsArray.forEach(word => {if(word === search) count += 1})
  
   return count
 }
