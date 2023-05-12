@@ -184,14 +184,26 @@ function doesWordExist(wordsArray, searchedWord) {
     return null
   }
 
-  for (let word of wordsArray) {
-    if (word === searchedWord) {
-      return true
-    }
-  }
+  // for (let word of wordsArray) {
+  //   if (word === searchedWord) {
+  //     return true
+  //   }
+  // }
   
   // if the word isn't found in the previous loop we'll get false at the end
-  return false
+  // return false
+
+
+  // To use a .forEach we need to hold true or false on a variable
+  let result = false
+
+  wordsArray.forEach((word) => {
+    if (word === searchedWord) {
+      result = true
+    }
+  })
+
+  return result 
 }
 
 // Iteration #7: Count repetition
@@ -245,7 +257,26 @@ const matrix = [
 	[1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48],
 ]
 
-function greatestProduct() {}
+function greatestProduct(array) {
+	let max = 0;
+ 
+  // The first for...loop will go through the vertical of the matrix
+ 	for (let i = 0; i < array.length; i += 1) {
+
+    // That for...loop go horizontally on the matrix  
+		for (let j = 0; j < array[i].length; j += 1) {
+
+      // here i'm adding value to j to get the adjacent numbers
+			let product = array[i][j] * array[i][j + 1] * array[i][j + 2] * array[i][j + 3];
+
+			if (product > max) {
+				max = product;
+			}
+		}
+	}
+  
+  return max;
+}
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
