@@ -62,8 +62,8 @@ function sum(genericArray) {
 	let sum = 0
 
 	genericArray.forEach(function (element) {
-		  // Because we don't support receiving objects or arrays 
-      // and arrays are typeof object
+		// Because we don't support receiving objects or arrays 
+    // and arrays are typeof object
 		if (typeof element === 'object') {
 			throw new Error(`Unsupported data type sir or ma'am`)
 		} else if (typeof element === 'string') {
