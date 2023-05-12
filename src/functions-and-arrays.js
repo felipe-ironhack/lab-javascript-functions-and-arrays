@@ -219,7 +219,6 @@ function howManyTimes(array, searched) {
   })
 
   return count
-
 }
 
 // Iteration #8: Bonus
